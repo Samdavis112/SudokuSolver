@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Asap, sans-serif;
+}
+
+body{
+    background-color: rgb(53, 53, 110);
+    align-content: center;
+}
+
+nav{
+    background-color: white;
+    padding: 10px;
+    text-align: center
+}
+
+.sudoku {
+    border: 4px solid black; 
+    border-collapse: collapse;
+    margin: 70px auto  20px;
+    
+}
+
+.sudoku tr {
+    padding:0;
+}
+
+.sudoku td {
+    padding:0; 
+    border:1px solid black; 
+    width:1em;
+}
+
+.sudoku input {
+    width:1em; 
+    border:0; 
+    font-size:25pt;
+    text-align:center;
+}
+
+#Col3, #Col6{
+    border-right:4px solid black !important;
+}
+
+#Row3, #Row6 {
+    border-bottom:4px solid black;
+}
+
+#buttons{
+    width: fit-content;
+    margin: 0 auto; 
+}
+.Button{
+    background-color: rgb(53, 53, 110);
+    border: 2px solid white;
+    border-radius: 3px;
+    padding: 5px;
+    width: 50px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.Button:hover{
+    background-color: rgb(21, 21, 46);
+}

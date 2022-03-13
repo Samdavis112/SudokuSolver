@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav>
+        <h1>Sudoku Solver</h1>
+        <p>Sam Davis</p>
+    </nav>
+
+    <table class="sudoku" id="Board">
+        <tbody>
+            <tr id="Row1">
+                <td id="Col1"><input type="text" maxlength="1" /></td>
+                <td id="Col2"><input type="text" maxlength="1" /></td>
+                <td id="Col3"><input type="text" maxlength="1" /></td>
+                <td id="Col4"><input type="text" maxlength="1" /></td>
+                <td id="Col5"><input type="text" maxlength="1" /></td>
+                <td id="Col6"><input type="text" maxlength="1" /></td>
+                <td id="Col7"><input type="text" maxlength="1" /></td>
+                <td id="Col8"><input type="text" maxlength="1" /></td>
+                <td id="Col9"><input type="text" maxlength="1" /></td>
+            </tr>
+            <tr id="Row2">
+                <td id="Col1"><input type="text" maxlength="1" /></td>
+                <td id="Col2"><input type="text" maxlength="1" /></td>
+                <td id="Col3"><input type="text" maxlength="1" /></td>
+                <td id="Col4"><input type="text" maxlength="1" /></td>
+                <td id="Col5"><input type="text" maxlength="1" /></td>
+                <td id="Col6"><input type="text" maxlength="1" /></td>
+                <td id="Col7"><input type="text" maxlength="1" /></td>
+                <td id="Col8"><input type="text" maxlength="1" /></td>
+                <td id="Col9"><input type="text" maxlength="1" /></td>
+            </tr>
+            <tr id="Row3">
+                <td id="Col1"><input type="text" maxlength="1" /></td>
+                <td id="Col2"><input type="text" maxlength="1" /></td>
+                <td id="Col3"><input type="text" maxlength="1" /></td>
+                <td id="Col4"><input type="text" maxlength="1" /></td>
+                <td id="Col5"><input type="text" maxlength="1" /></td>
+                <td id="Col6"><input type="text" maxlength="1" /></td>
+                <td id="Col7"><input type="text" maxlength="1" /></td>
+                <td id="Col8"><input type="text" maxlength="1" /></td>
+                <td id="Col9"><input type="text" maxlength="1" /></td>
+            </tr>
+            <tr id="Row4">
+                <td id="Col1"><input type="text" maxlength="1" /></td>
+                <td id="Col2"><input type="text" maxlength="1" /></td>
+                <td id="Col3"><input type="text" maxlength="1" /></td>
+                <td id="Col4"><input type="text" maxlength="1" /></td>
+                <td id="Col5"><input type="text" maxlength="1" /></td>
+                <td id="Col6"><input type="text" maxlength="1" /></td>
+                <td id="Col7"><input type="text" maxlength="1" /></td>
+                <td id="Col8"><input type="text" maxlength="1" /></td>
+                <td id="Col9"><input type="text" maxlength="1" /></td>
+            </tr>
+            <tr id="Row5">
+                <td id="Col1"><input type="text" maxlength="1" /></td>
+                <td id="Col2"><input type="text" maxlength="1" /></td>
+                <td id="Col3"><input type="text" maxlength="1" /></td>
+                <td id="Col4"><input type="text" maxlength="1" /></td>
+                <td id="Col5"><input type="text" maxlength="1" /></td>
+                <td id="Col6"><input type="text" maxlength="1" /></td>
+                <td id="Col7"><input type="text" maxlength="1" /></td>
+                <td id="Col8"><input type="text" maxlength="1" /></td>
+                <td id="Col9"><input type="text" maxlength="1" /></td>
+            </tr>
+            <tr id="Row6">
+                <td id="Col1"><input type="text" maxlength="1" /></td>
+                <td id="Col2"><input type="text" maxlength="1" /></td>
+                <td id="Col3"><input type="text" maxlength="1" /></td>
+                <td id="Col4"><input type="text" maxlength="1" /></td>
+                <td id="Col5"><input type="text" maxlength="1" /></td>
+                <td id="Col6"><input type="text" maxlength="1" /></td>
+                <td id="Col7"><input type="text" maxlength="1" /></td>
+                <td id="Col8"><input type="text" maxlength="1" /></td>
+                <td id="Col9"><input type="text" maxlength="1" /></td>
+            </tr>
+            <tr id="Row7">
+                <td id="Col1"><input type="text" maxlength="1" /></td>
+                <td id="Col2"><input type="text" maxlength="1" /></td>
+                <td id="Col3"><input type="text" maxlength="1" /></td>
+                <td id="Col4"><input type="text" maxlength="1" /></td>
+                <td id="Col5"><input type="text" maxlength="1" /></td>
+                <td id="Col6"><input type="text" maxlength="1" /></td>
+                <td id="Col7"><input type="text" maxlength="1" /></td>
+                <td id="Col8"><input type="text" maxlength="1" /></td>
+                <td id="Col9"><input type="text" maxlength="1" /></td>
+            </tr>
+            <tr id="Row8">
+                <td id="Col1"><input type="text" maxlength="1" /></td>
+                <td id="Col2"><input type="text" maxlength="1" /></td>
+                <td id="Col3"><input type="text" maxlength="1" /></td>
+                <td id="Col4"><input type="text" maxlength="1" /></td>
+                <td id="Col5"><input type="text" maxlength="1" /></td>
+                <td id="Col6"><input type="text" maxlength="1" /></td>
+                <td id="Col7"><input type="text" maxlength="1" /></td>
+                <td id="Col8"><input type="text" maxlength="1" /></td>
+                <td id="Col9"><input type="text" maxlength="1" /></td>
+            </tr>
+            <tr id="Row9">
+                <td id="Col1"><input type="text" maxlength="1" /></td>
+                <td id="Col2"><input type="text" maxlength="1" /></td>
+                <td id="Col3"><input type="text" maxlength="1" /></td>
+                <td id="Col4"><input type="text" maxlength="1" /></td>
+                <td id="Col5"><input type="text" maxlength="1" /></td>
+                <td id="Col6"><input type="text" maxlength="1" /></td>
+                <td id="Col7"><input type="text" maxlength="1" /></td>
+                <td id="Col8"><input type="text" maxlength="1" /></td>
+                <td id="Col9"><input type="text" maxlength="1" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="buttons">
+        <button id="clearButton" class="Button">Clear</button>
+        <button id="solveButton" class="Button">Solve!</button>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
