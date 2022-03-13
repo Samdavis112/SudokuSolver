@@ -64,9 +64,9 @@ let board =[
     
 function solve(){
     readBoard();
-    console.log(board);
+    //console.log(board);
     solveSudoku();
-    console.log(board);
+    //console.log(board);
     setAllBoard();
     console.log(board);
 }
