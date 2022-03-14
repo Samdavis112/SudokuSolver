@@ -1,6 +1,8 @@
-const solveButton = document.getElementById("solveButton");
-const clearButton = document.getElementById("clearButton");
+//Variables that reference HTML elements.
+const solveButton = document.querySelector("#solveButton");
+const clearButton = document.querySelector("#clearButton");
 
+//A function to get the data within a specific cell.
 function getCell(rowNumber, colNumber){
     const row = document.querySelector(`#Row${rowNumber}`);
     const cell = row.querySelector(`#Col${colNumber}`);
@@ -9,6 +11,7 @@ function getCell(rowNumber, colNumber){
     return cell.firstChild.value;
 }
 
+//A procedure to set the data within a specific cell.
 function setCell(rowNumber, colNumber, data){
     const row = document.querySelector(`#Row${rowNumber}`);
     const cell = row.querySelector(`#Col${colNumber}`);
@@ -17,6 +20,7 @@ function setCell(rowNumber, colNumber, data){
     cell.firstChild.value = data;
 }
 
+//A procedure that clears all cells by looping through the set cell proceure with data ""
 function clear(){
     for(let i = 1; i < 10; i++){
         for(let j = 1; j< 10; j++){
@@ -26,6 +30,7 @@ function clear(){
     }
 }
 
+//A procedure that fills in the HTML board with the 2d array "Board"
 function setAllBoard(){
     for(let l = 0; l < 9; l++){
         for(let s = 0; s < 9; s++){
@@ -40,6 +45,7 @@ function setAllBoard(){
     }
 }
 
+//A procedure that fills the 2d array "Board" with the data from the HTML table
 function readBoard(){
     for(let l = 0; l < 9; l++){
         for(let s = 0; s < 9; s++){
@@ -51,6 +57,7 @@ function readBoard(){
     }
 }
 
+//2d array "Board"
 let board =[
     ['.', '.', '.', '.', '.', '.', '.', '.', '.' ],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.' ],
@@ -59,9 +66,11 @@ let board =[
     ['.', '.', '.', '.', '.', '.', '.', '.', '.' ],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.' ],
     ['.', '.', '.', '.', '.', '.', '.', '.', '.' ],
-    ['.', '.', '.', '.', '.', '.', '.', '.', '.' ],
-    ['.', '.', '.', '.', '.', '.', '.', '.', '.' ]];
-    
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.', '.']
+];
+   
+//The main solve procedure that calls multiple functions.
 function solve(){
     readBoard();
     //console.log(board);
@@ -71,7 +80,7 @@ function solve(){
     console.log(board);
 }
 
-function solveSudoku(){
+function solveSudoku() {
     if(board == null || board.length == 0){
         return;
     }
@@ -120,6 +129,7 @@ function isValid(row, col, c){
     return true;
 }
 
+//Main procedure that adds event listeners to the clear and solve buttons.
 function main(){
     solveButton.addEventListener('click', function(){
         solve();
